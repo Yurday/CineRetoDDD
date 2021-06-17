@@ -1,4 +1,6 @@
 package cine.values;
 
-public class CarteleraId {
+import co.com.sofka.domain.generic.Identity;
+
+public class CarteleraId extends Identity {
 }

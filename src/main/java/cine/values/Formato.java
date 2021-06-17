@@ -1,4 +1,9 @@
 package cine.values;
 
-public class Formato {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class Formato implements ValueObject<String> {
+    public String value(){
+        return null;
+    }
 }

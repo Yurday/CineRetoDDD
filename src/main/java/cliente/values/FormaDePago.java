@@ -1,4 +1,9 @@
 package cliente.values;
 
-public class FormaDePago {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class FormaDePago implements ValueObject<String> {
+    public String value(){
+        return null;
+    }
 }

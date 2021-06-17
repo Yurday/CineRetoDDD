@@ -1,4 +1,9 @@
 package cine.values;
 
-public class Capacidad {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class Capacidad implements ValueObject<String> {
+    public String value(){
+        return null;
+    }
 }

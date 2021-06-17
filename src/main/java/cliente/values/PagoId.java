@@ -1,4 +1,6 @@
 package cliente.values;
 
-public class PagoId {
+import co.com.sofka.domain.generic.Identity;
+
+public class PagoId extends Identity {
 }

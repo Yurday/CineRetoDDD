@@ -1,4 +1,6 @@
 package cine.values;
 
-public class TiqueteId {
+import co.com.sofka.domain.generic.Identity;
+
+public class TiqueteId extends Identity {
 }

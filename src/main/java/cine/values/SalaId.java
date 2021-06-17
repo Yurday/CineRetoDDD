@@ -1,4 +1,6 @@
 package cine.values;
 
-public class SalaId {
+import co.com.sofka.domain.generic.Identity;
+
+public class SalaId extends Identity {
 }

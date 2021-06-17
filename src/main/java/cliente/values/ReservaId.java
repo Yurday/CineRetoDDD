@@ -1,4 +1,6 @@
 package cliente.values;
 
-public class ReservaId {
+import co.com.sofka.domain.generic.Identity;
+
+public class ReservaId extends Identity {
 }

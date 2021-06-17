@@ -1,4 +1,9 @@
 package cine.values;
 
-public class NombreSala {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class NombreSala implements ValueObject<String> {
+    public String value(){
+        return null;
+    }
 }
