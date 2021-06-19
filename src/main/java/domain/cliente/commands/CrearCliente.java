@@ -1,31 +1,34 @@
-package domain.cliente.events;
+package domain.cliente.commands;
 
-import co.com.sofka.domain.generic.DomainEvent;
-import domain.cine.entities.Tiquete;
-import domain.cliente.Cliente;
+import co.com.sofka.domain.generic.Command;
 import domain.cliente.entities.Datos;
 import domain.cliente.entities.Pago;
 import domain.cliente.entities.Reserva;
 import domain.cliente.values.ClienteId;
 import domain.cliente.values.NombreCliente;
 
-public class ClienteCreado extends DomainEvent {
+public class CrearCliente implements Command {
 
     private final ClienteId clienteId;
+    private final NombreCliente nombreCliente;
     private final Datos datos;
     private final Pago pago;
     private final Reserva reserva;
 
-    public ClienteCreado(ClienteId clienteId, Tiquete tiquete, NombreCliente nombreCliente, Datos datos, Pago pago, Reserva reserva) {
-        super("cineretoddd.domain.cliente.clientecreado");
-        this.clienteId = clienteId;
-        this.datos = datos;
-        this.pago = pago;
-        this.reserva = reserva;
-    }
+public CrearCliente (ClienteId clienteId, NombreCliente nombreCliente, Datos datos, Pago pago, Reserva reserva){
+    this.clienteId = clienteId;
+    this.nombreCliente = nombreCliente;
+    this.datos = datos;
+    this.pago = pago;
+    this.reserva = reserva;
+}
 
     public ClienteId getClienteId() {
         return clienteId;
+    }
+
+    public NombreCliente getNombreCliente() {
+        return nombreCliente;
     }
 
     public Datos getDatos() {

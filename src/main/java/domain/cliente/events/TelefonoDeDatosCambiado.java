@@ -6,17 +6,11 @@ import co.com.sofka.domain.generic.DomainEvent;
 
 public class TelefonoDeDatosCambiado extends DomainEvent {
 
-    private final DatosId datosId;
     private final Telefono telefono;
 
-    public TelefonoDeDatosCambiado (DatosId datosId, Telefono telefono){
+    public TelefonoDeDatosCambiado (Telefono telefono){
         super("cineretoddd.domain.cliente.telefonodedatoscambiado");
-        this.datosId = datosId;
         this.telefono = telefono;
-    }
-
-    public DatosId getDatosId() {
-        return datosId;
     }
 
     public Telefono getTelefono() {

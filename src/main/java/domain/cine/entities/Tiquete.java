@@ -22,4 +22,5 @@ public class Tiquete extends Entity <TiqueteId> {
     public NombreDeVendedor nombreDeVendedor(){
         return nombreDeVendedor;
     }
+
 }

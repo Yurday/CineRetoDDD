@@ -11,7 +11,7 @@ public class Correo implements ValueObject<String> {
     public Correo(String value) {
         this.value = Objects.requireNonNull(value);
         if (this.value.isBlank()){
-            throw new IllegalArgumentException("El nombre de la aerolinea esta vacia");
+            throw new IllegalArgumentException("El correo no ha sido asociado");
         }
     }
 

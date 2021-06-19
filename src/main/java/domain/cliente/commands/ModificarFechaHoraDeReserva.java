@@ -1,21 +1,21 @@
 package domain.cliente.commands;
 
 import co.com.sofka.domain.generic.Command;
+import domain.cliente.values.ClienteId;
 import domain.cliente.values.FechaHora;
-import domain.cliente.values.ReservaId;
 
 public class ModificarFechaHoraDeReserva implements Command {
 
-    private final ReservaId reservaId;
+    private final ClienteId clienteId;
     private final FechaHora fechaHora;
 
-    public ModificarFechaHoraDeReserva(ReservaId reservaId, FechaHora fechaHora){
-        this.reservaId = reservaId;
+    public ModificarFechaHoraDeReserva(ClienteId clienteId, FechaHora fechaHora){
+        this.clienteId = clienteId;
         this.fechaHora = fechaHora;
     }
 
-    public ReservaId getReservaId() {
-        return reservaId;
+    public ClienteId getClienteId() {
+        return clienteId;
     }
 
     public FechaHora getFechaHora() {

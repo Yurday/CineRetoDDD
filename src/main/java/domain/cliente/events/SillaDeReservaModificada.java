@@ -6,17 +6,11 @@ import co.com.sofka.domain.generic.DomainEvent;
 
 public class SillaDeReservaModificada extends DomainEvent {
 
-    private final ReservaId reservaId;
     private final Silla silla;
 
-    public SillaDeReservaModificada(ReservaId reservaId, Silla silla){
+    public SillaDeReservaModificada(Silla silla){
         super("cineretoddd.domain.cliente.silladereservamodificada");
-        this.reservaId = reservaId;
         this.silla = silla;
-    }
-
-    public ReservaId getReservaId() {
-        return reservaId;
     }
 
     public Silla getSilla() {

@@ -34,4 +34,20 @@ public class Cartelera extends Entity <CarteleraId> {
     public void modificarPrecioDePelicula(Precio precio){
         this.precio = precio;
     }
+
+    public Horario horario(){
+        return horario;
+    }
+
+    public Pelicula pelicula() {
+        return pelicula;
+    }
+
+    public Formato formato() {
+        return formato;
+    }
+
+    public Precio precio() {
+        return precio;
+    }
 }

@@ -1,21 +1,21 @@
 package domain.cliente.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.cliente.values.ReservaId;
+import domain.cliente.values.ClienteId;
 import domain.cliente.values.Silla;
 
 public class ModificarSillaDeReserva implements Command {
 
-    private final ReservaId reservaId;
+    private final ClienteId clienteId;
     private final Silla silla;
 
-    public ModificarSillaDeReserva (ReservaId reservaId, Silla silla){
-        this.reservaId = reservaId;
+    public ModificarSillaDeReserva (ClienteId clienteId, Silla silla){
+        this.clienteId = clienteId;
         this.silla = silla;
     }
 
-    public ReservaId getReservaId() {
-        return reservaId;
+    public ClienteId getClienteId() {
+        return clienteId;
     }
 
     public Silla getSilla() {

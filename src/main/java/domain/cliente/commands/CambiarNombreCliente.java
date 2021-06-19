@@ -6,16 +6,10 @@ import domain.cliente.values.NombreCliente;
 
 public class CambiarNombreCliente implements Command {
 
-    private final ClienteId clienteId;
     private final NombreCliente nombreCliente;
 
-    public CambiarNombreCliente(ClienteId clienteId, NombreCliente nombreCliente){
-        this.clienteId = clienteId;
+    public CambiarNombreCliente(NombreCliente nombreCliente){
         this.nombreCliente = nombreCliente;
-    }
-
-    public ClienteId getClienteId() {
-        return clienteId;
     }
 
     public NombreCliente getNombreCliente() {

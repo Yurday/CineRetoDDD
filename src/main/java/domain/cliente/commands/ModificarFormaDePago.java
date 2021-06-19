@@ -1,21 +1,21 @@
 package domain.cliente.commands;
 
 import co.com.sofka.domain.generic.Command;
+import domain.cliente.values.ClienteId;
 import domain.cliente.values.FormaDePago;
-import domain.cliente.values.PagoId;
 
 public class ModificarFormaDePago implements Command {
 
-    private final PagoId pagoId;
+    private final ClienteId clienteId;
     private final FormaDePago formaDePago;
 
-    public ModificarFormaDePago(PagoId pagoId, FormaDePago formaDePago){
-        this.pagoId = pagoId;
+    public ModificarFormaDePago(ClienteId clienteId, FormaDePago formaDePago){
+        this.clienteId = clienteId;
         this.formaDePago = formaDePago;
     }
 
-    public PagoId getPagoId() {
-        return pagoId;
+    public ClienteId getClienteId() {
+        return clienteId;
     }
 
     public FormaDePago getFormaDePago() {

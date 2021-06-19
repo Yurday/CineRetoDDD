@@ -21,4 +21,8 @@ public class Sala extends Entity <SalaId> {
     public void modificarNombreDeSala(NombreSala nombreSala){
         this.nombreSala = Objects.requireNonNull(nombreSala);
     }
+
+    public NombreSala nombreSala() {
+        return nombreSala;
+    }
 }

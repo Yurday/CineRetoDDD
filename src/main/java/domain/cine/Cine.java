@@ -7,7 +7,6 @@ import domain.cine.entities.Tiquete;
 import domain.cine.events.*;
 import domain.cine.values.*;
 import co.com.sofka.domain.generic.AggregateEvent;
-
 import java.util.List;
 
 public class Cine extends AggregateEvent <CineId>{
@@ -27,6 +26,7 @@ public Cine (CineId cineId, NombreCine nombreCine, Cartelera cartelera, Sala sal
         subscribe(new CineChange(this));
     }
 
+    //Factoría que permite crear el agregado
     public static Cine from (CineId cineId, List<DomainEvent> events){
         var cine = new Cine(cineId);
         events.forEach(cine::applyEvent);
