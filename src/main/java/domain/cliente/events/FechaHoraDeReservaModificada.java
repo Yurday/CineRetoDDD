@@ -1,7 +1,6 @@
 package domain.cliente.events;
 
 import domain.cliente.values.FechaHora;
-import domain.cliente.values.ReservaId;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class FechaHoraDeReservaModificada extends DomainEvent {

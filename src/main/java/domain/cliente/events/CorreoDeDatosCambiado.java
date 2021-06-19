@@ -1,8 +1,6 @@
 package domain.cliente.events;
 
-import domain.cliente.values.ClienteId;
 import domain.cliente.values.Correo;
-import domain.cliente.values.DatosId;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class CorreoDeDatosCambiado extends DomainEvent {

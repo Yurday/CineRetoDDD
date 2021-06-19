@@ -1,7 +1,6 @@
 package domain.cine.events;
 
 import domain.cine.values.NombreSala;
-import domain.cine.values.SalaId;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class NombreDeSalaModificado extends DomainEvent {

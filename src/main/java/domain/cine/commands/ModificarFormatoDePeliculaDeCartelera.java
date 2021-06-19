@@ -1,7 +1,6 @@
 package domain.cine.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.cine.values.CarteleraId;
 import domain.cine.values.CineId;
 import domain.cine.values.Formato;
 

@@ -1,6 +1,5 @@
 package domain.cliente.events;
 
-import domain.cliente.values.ReservaId;
 import domain.cliente.values.Silla;
 import co.com.sofka.domain.generic.DomainEvent;
 

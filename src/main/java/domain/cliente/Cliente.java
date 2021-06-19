@@ -1,12 +1,7 @@
 package domain.cliente;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.cine.entities.Cartelera;
-import domain.cine.entities.Sala;
 import domain.cine.entities.Tiquete;
-import domain.cine.events.CineCreado;
-import domain.cine.values.CineId;
-import domain.cine.values.NombreCine;
 import domain.cliente.entities.Datos;
 import domain.cliente.entities.Pago;
 import domain.cliente.entities.Reserva;
@@ -25,7 +20,7 @@ public class Cliente extends AggregateEvent <ClienteId>{
 
     public Cliente (ClienteId clienteId, Tiquete tiquete, NombreCliente nombreCliente, Datos datos, Pago pago, Reserva reserva){
         super(clienteId);
-        appendChange(new ClienteCreado(clienteId, tiquete, nombreCliente, datos, pago, reserva)).apply();
+        appendChange(new ClienteCreado(clienteId, nombreCliente, datos, pago, reserva)).apply();
     }
 
     private Cliente(ClienteId clienteId) {
@@ -44,8 +39,8 @@ public class Cliente extends AggregateEvent <ClienteId>{
         appendChange(new CorreoDeDatosCambiado(correo)).apply();
     }
 
-    public void cambiarNombreCliente(NombreCliente nombreCliente){
-        appendChange(new NombreClienteCambiado(nombreCliente)).apply();
+    public void cambiarNombreCliente(ClienteId clienteId,NombreCliente nombreCliente){
+        appendChange(new NombreClienteCambiado(clienteId, nombreCliente)).apply();
     }
 
     public void cambiarTelefonoDeDatos(Telefono telefono){
@@ -74,6 +69,10 @@ public class Cliente extends AggregateEvent <ClienteId>{
 
     public Tiquete tiquete() {
         return tiquete;
+    }
+
+    public ClienteId clienteId(){
+        return clienteId();
     }
 
     public NombreCliente nombreCliente() {

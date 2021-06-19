@@ -3,7 +3,6 @@ package usecase.notifications;
 import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofka.business.support.TriggeredEvent;
-import domain.cliente.events.PagoRealizado;
 import domain.cliente.events.SillaDeReservaModificada;
 
 public class NotificarSillaUseCase extends UseCase<TriggeredEvent<SillaDeReservaModificada>, ResponseEvents> {

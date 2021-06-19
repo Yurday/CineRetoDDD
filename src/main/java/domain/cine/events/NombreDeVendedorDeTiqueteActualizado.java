@@ -1,7 +1,6 @@
 package domain.cine.events;
 
 import domain.cine.values.NombreDeVendedor;
-import domain.cine.values.TiqueteId;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class NombreDeVendedorDeTiqueteActualizado extends DomainEvent {

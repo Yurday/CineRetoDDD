@@ -1,6 +1,5 @@
 package domain.cine.events;
 
-import domain.cine.values.CarteleraId;
 import domain.cine.values.Precio;
 import co.com.sofka.domain.generic.DomainEvent;
 

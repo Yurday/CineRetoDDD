@@ -1,6 +1,5 @@
 package domain.cliente.events;
 
-import domain.cliente.values.DatosId;
 import domain.cliente.values.Telefono;
 import co.com.sofka.domain.generic.DomainEvent;
 

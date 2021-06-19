@@ -3,14 +3,10 @@ package usecase.notifications;
 import co.com.sofka.business.generic.ServiceBuilder;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.TriggeredEvent;
-import domain.cliente.events.PagoRealizado;
 import domain.cliente.events.SillaDeReservaModificada;
-import domain.cliente.values.FormaDePago;
 import domain.cliente.values.Silla;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;

@@ -1,7 +1,6 @@
 package domain.cliente.events;
 
 import domain.cliente.values.FormaDePago;
-import domain.cliente.values.PagoId;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class FormaDePagoModificada extends DomainEvent {

@@ -1,10 +1,7 @@
 package domain.cliente.events;
 
-import domain.cliente.entities.Pago;
-import domain.cliente.values.ClienteId;
 import co.com.sofka.domain.generic.DomainEvent;
 import domain.cliente.values.FormaDePago;
-import domain.cliente.values.PagoId;
 
 public class PagoRealizado extends DomainEvent {
 

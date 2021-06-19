@@ -3,7 +3,6 @@ package domain.cine.commands;
 import co.com.sofka.domain.generic.Command;
 import domain.cine.values.CineId;
 import domain.cine.values.NombreSala;
-import domain.cine.values.SalaId;
 
 public class ModificarNombreDeSala implements Command {
 
