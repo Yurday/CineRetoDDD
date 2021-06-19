@@ -2,23 +2,24 @@ package domain.cine.commands;
 
 import co.com.sofka.domain.generic.Command;
 import domain.cine.values.CarteleraId;
+import domain.cine.values.CineId;
 import domain.cine.values.Formato;
 
 public class ModificarFormatoDePeliculaDeCartelera implements Command {
 
-    private final CarteleraId carteleraId;
-    private final Formato formato;
+   private final Formato formato;
+   private final CineId cineId;
 
-    public ModificarFormatoDePeliculaDeCartelera (CarteleraId carteleraId, Formato formato){
-        this.carteleraId = carteleraId;
+    public ModificarFormatoDePeliculaDeCartelera (CineId cineId, Formato formato){
+        this.cineId = cineId;
         this.formato = formato;
     }
 
-    public CarteleraId getCarteleraId() {
-        return carteleraId;
+   public Formato getFormato() {
+        return formato;
     }
 
-    public Formato getFormato() {
-        return formato;
+    public CineId getCineId() {
+        return cineId;
     }
 }

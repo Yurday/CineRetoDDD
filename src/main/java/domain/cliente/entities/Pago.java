@@ -1,4 +1,4 @@
-package domain.cliente;
+package domain.cliente.entities;
 
 import domain.cliente.values.FormaDePago;
 import domain.cliente.values.PagoId;

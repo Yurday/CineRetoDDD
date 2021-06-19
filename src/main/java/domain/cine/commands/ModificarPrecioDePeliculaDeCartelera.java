@@ -1,20 +1,21 @@
 package domain.cine.commands;
 
-import domain.cine.values.CarteleraId;
+import co.com.sofka.domain.generic.Command;
+import domain.cine.values.CineId;
 import domain.cine.values.Precio;
 
-public class ModificarPrecioDePeliculaDeCartelera {
+public class ModificarPrecioDePeliculaDeCartelera implements Command {
 
-    private final CarteleraId carteleraId;
+    private final CineId cineId;
     private final Precio precio;
 
-    public ModificarPrecioDePeliculaDeCartelera (CarteleraId carteleraId, Precio precio){
-        this.carteleraId = carteleraId;
+    public ModificarPrecioDePeliculaDeCartelera (CineId cineId, Precio precio){
+        this.cineId = cineId;
         this.precio = precio;
     }
 
-    public CarteleraId getCarteleraId() {
-        return carteleraId;
+    public CineId getCineId() {
+        return cineId;
     }
 
     public Precio getPrecio() {

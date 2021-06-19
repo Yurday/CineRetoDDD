@@ -1,8 +1,10 @@
 package domain.cliente;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.cine.Tiquete;
-import domain.cliente.events.*;
+import domain.cine.entities.Tiquete;
+import domain.cliente.entities.Datos;
+import domain.cliente.entities.Pago;
+import domain.cliente.entities.Reserva;
 import domain.cliente.values.*;
 import co.com.sofka.domain.generic.AggregateEvent;
 
@@ -27,6 +29,10 @@ public class Cliente extends AggregateEvent <ClienteId>{
         events.forEach(cliente::applyEvent);
         return cliente;
     }
+/*
+    public void crearCliente (ClienteId clienteId, Datos datos){
+        appendChange(new ClienteCreado(nombreCliente)).apply();
+    }
 
     public void cambiarNombreCliente(NombreCliente nombreCliente){
         appendChange(new NombreClienteCambiado(nombreCliente)).apply();
@@ -40,8 +46,8 @@ public class Cliente extends AggregateEvent <ClienteId>{
         appendChange(new PagoRealizado(entityId, pago)).apply();
     }
 
-    public void cambiarCorreoDeDatos(ClienteId clienteId, Correo correo){
-        appendChange(new CorreoDeDatosCambiado(clienteId, correo)).apply();
+    public void cambiarCorreoDeDatos(DatosId datosId, Correo correo){
+        appendChange(new CorreoDeDatosCambiado(datosId, correo)).apply();
     }
 
     public void cambiarTelefonoDeDatos(DatosId entityId, Telefono telefono){
@@ -78,5 +84,5 @@ public class Cliente extends AggregateEvent <ClienteId>{
 
     public Reserva reserva() {
         return reserva;
-    }
+    }*/
 }

@@ -1,7 +1,7 @@
 package domain.cliente.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.cliente.Reserva;
+import domain.cliente.entities.Reserva;
 import domain.cliente.values.ClienteId;
 
 public class RealizarReserva implements Command {

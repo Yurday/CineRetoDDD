@@ -1,21 +1,21 @@
 package domain.cine.commands;
 
 import co.com.sofka.domain.generic.Command;
+import domain.cine.values.CineId;
 import domain.cine.values.NombreDeVendedor;
-import domain.cine.values.TiqueteId;
 
 public class ActualizarNombreDeVendedorDeTiquete implements Command {
 
-    private final TiqueteId tiqueteId;
+    private final CineId cineId;
     private final NombreDeVendedor nombreDeVendedor;
 
-    public ActualizarNombreDeVendedorDeTiquete (TiqueteId tiqueteId, NombreDeVendedor nombreDeVendedor){
-        this.tiqueteId = tiqueteId;
+    public ActualizarNombreDeVendedorDeTiquete (CineId cineId, NombreDeVendedor nombreDeVendedor){
+        this.cineId = cineId;
         this.nombreDeVendedor = nombreDeVendedor;
     }
 
-    public TiqueteId getTiqueteId() {
-        return tiqueteId;
+    public CineId getCineId() {
+        return cineId;
     }
 
     public NombreDeVendedor getNombreDeVendedor() {

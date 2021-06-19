@@ -1,4 +1,4 @@
-package domain.cine;
+package domain.cine.entities;
 
 import domain.cine.values.NombreDeVendedor;
 import domain.cine.values.TiqueteId;

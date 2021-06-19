@@ -6,17 +6,11 @@ import co.com.sofka.domain.generic.DomainEvent;
 
 public class NombreDeVendedorDeTiqueteActualizado extends DomainEvent {
 
-    private final TiqueteId tiqueteId;
     private final NombreDeVendedor nombreDeVendedor;
 
-    public NombreDeVendedorDeTiqueteActualizado(TiqueteId tiqueteId, NombreDeVendedor nombreDeVendedor){
+    public NombreDeVendedorDeTiqueteActualizado(NombreDeVendedor nombreDeVendedor){
         super("cineretoddd.domain.cine.nombredevendedordetiqueteactualizado");
-        this.tiqueteId = tiqueteId;
         this.nombreDeVendedor = nombreDeVendedor;
-    }
-
-    public TiqueteId getTiqueteId() {
-        return tiqueteId;
     }
 
     public NombreDeVendedor getNombreDeVendedor() {

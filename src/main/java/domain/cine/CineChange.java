@@ -6,36 +6,41 @@ import co.com.sofka.domain.generic.EventChange;
 public class CineChange extends EventChange {
 
     public CineChange(Cine cine){
-        apply((FormatoDePeliculaDeCarteleraModificado event) -> {
-            var cartelera = cine.getCarteleraId(event.carteleraId())
-                    .orElseThrow(()->new IllegalArgumentException("Cartelera no existe"));
-            cartelera.modificarFormatoDePelicula(event.formato());
-        });
-/*
-        apply((HorarioDeCarteleraModificado event) -> {
-            domain.cine.getCarteleraId = event.horario();
+
+        apply((CineCreado event) -> {
+        cine.nombreCine = event.getNombreCine();
+        cine.cartelera = event.getCartelera();
+        cine.sala = event.getSala();
+        cine.tiquete = event.getTiquete();
         });
 
-        apply((NombreDeCineCambiado event) -> {
-            domain.cine.nombreCine = event.nombreCine();
+        apply((FormatoDePeliculaDeCarteleraModificado event)->{
+            cine.cartelera.modificarFormatoDePelicula(event.getFormato());
         });
 
-        apply((NombreDeSalaModificado event) -> {
-            domain.cine.salaId = event.nombreSala();
+        apply((HorarioDeCarteleraModificado event)->{
+            cine.cartelera.modificarHorario(event.getHorario());
         });
 
-        apply((NombreDeVendedorDeTiqueteActualizado event) -> {
-            domain.cine.cartelera = event.nombreDeVendedor();
+        apply((NombreDeCineCambiado event)->{
+            cine.nombreCine = event.getNombreCine();
+
         });
 
-        apply((PeliculaDeCarteleraModificada event) -> {
-            domain.cine.cartelera = event.pelicula();
+        apply((NombreDeSalaModificado event)->{
+            cine.sala.modificarNombreDeSala(event.getNombreSala());
         });
 
-        apply((PrecioDePeliculaDeCarteleraModificado event) -> {
-            domain.cine.cartelera = event.precio();
+        apply((NombreDeVendedorDeTiqueteActualizado event)->{
+            cine.tiquete.actualizarNombreDeVendedor(event.getNombreDeVendedor());
         });
-        */
 
+        apply((PeliculaDeCarteleraModificada event)->{
+            cine.cartelera.modificarPelicula(event.getPelicula());
+        });
+
+        apply((PrecioDePeliculaDeCarteleraModificado event)->{
+            cine.cartelera.modificarPrecioDePelicula(event.getPrecio());
+        });
     }
 }

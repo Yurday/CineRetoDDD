@@ -7,17 +7,17 @@ import co.com.sofka.domain.generic.DomainEvent;
 
 public class CorreoDeDatosCambiado extends DomainEvent {
 
-    private final ClienteId clienteId;
+    private final DatosId datosId;
     private final Correo correo;
 
-    public CorreoDeDatosCambiado(ClienteId clienteId, Correo correo){
+    public CorreoDeDatosCambiado(DatosId datosId, Correo correo){
         super("cineretoddd.domain.cliente.correodedatoscambiado");
-        this.clienteId = clienteId;
+        this.datosId = datosId;
         this.correo = correo;
     }
 
-    public ClienteId getClienteId() {
-        return clienteId;
+    public DatosId getDatosId() {
+        return datosId;
     }
 
     public Correo getCorreo() {

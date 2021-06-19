@@ -1,4 +1,4 @@
-package domain.cine;
+package domain.cine.entities;
 
 import domain.cine.values.*;
 import co.com.sofka.domain.generic.Entity;

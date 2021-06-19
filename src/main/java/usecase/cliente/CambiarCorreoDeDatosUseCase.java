@@ -12,7 +12,8 @@ public class CambiarCorreoDeDatosUseCase extends UseCase <RequestCommand<Cambiar
     public void executeUseCase(RequestCommand<CambiarCorreoDeDatos>cambiarCorreoDeDatosRequestCommand){
         var command = cambiarCorreoDeDatosRequestCommand.getCommand();
         var correo = Cliente.from(command.getClienteId(), retrieveEvents(command.getCorreo().value()));
-        correo.cambiarCorreoDeDatos(command.getClienteId(), command.getCorreo());
+        //correo.cambiarCorreoDeDatos(command.getDatosId(), command.getCorreo());
         emit().onResponse(new ResponseEvents((correo.getUncommittedChanges())));
     }
+
 }

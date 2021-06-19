@@ -1,4 +1,4 @@
-package domain.cliente;
+package domain.cliente.entities;
 
 import domain.cliente.values.FechaHora;
 import domain.cliente.values.ReservaId;

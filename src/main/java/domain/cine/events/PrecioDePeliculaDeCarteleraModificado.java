@@ -6,17 +6,11 @@ import co.com.sofka.domain.generic.DomainEvent;
 
 public class PrecioDePeliculaDeCarteleraModificado extends DomainEvent {
 
-    private final CarteleraId carteleraId;
     private final Precio precio;
 
-    public PrecioDePeliculaDeCarteleraModificado (CarteleraId carteleraId, Precio precio){
+    public PrecioDePeliculaDeCarteleraModificado (Precio precio){
         super("cineretoddd.domain.cine.preciodepeliculadecarteleramodificado");
-        this.carteleraId = carteleraId;
         this.precio = precio;
-    }
-
-    public CarteleraId getCarteleraId() {
-        return carteleraId;
     }
 
     public Precio getPrecio() {

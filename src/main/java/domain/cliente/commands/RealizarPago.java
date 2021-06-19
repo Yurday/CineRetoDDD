@@ -1,7 +1,7 @@
 package domain.cliente.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.cliente.Pago;
+import domain.cliente.entities.Pago;
 import domain.cliente.values.ClienteId;
 
 public class RealizarPago implements Command {

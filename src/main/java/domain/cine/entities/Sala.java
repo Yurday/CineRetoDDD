@@ -1,4 +1,4 @@
-package domain.cine;
+package domain.cine.entities;
 
 import domain.cine.values.Capacidad;
 import domain.cine.values.NombreSala;
