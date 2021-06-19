@@ -64,8 +64,8 @@ public class Cliente extends AggregateEvent <ClienteId>{
         appendChange(new SillaDeReservaModificada(silla)).apply();
     }
 
-    public void realizarPago(Pago pago){
-        appendChange(new PagoRealizado(pago)).apply();
+    public void realizarPago(FormaDePago formaDePago){
+        appendChange(new PagoRealizado(formaDePago)).apply();
     }
 
     public void realizarReserva(ClienteId clienteId, Reserva reserva){

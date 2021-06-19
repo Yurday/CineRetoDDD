@@ -3,17 +3,19 @@ package domain.cliente.events;
 import domain.cliente.entities.Pago;
 import domain.cliente.values.ClienteId;
 import co.com.sofka.domain.generic.DomainEvent;
+import domain.cliente.values.FormaDePago;
+import domain.cliente.values.PagoId;
 
 public class PagoRealizado extends DomainEvent {
 
-    private final Pago pago;
+    private final FormaDePago formaDePago;
 
-    public PagoRealizado(Pago pago){
+    public PagoRealizado(FormaDePago formaDePago){
         super("cineretoddd.domain.cliente.pagorealizado");
-        this.pago = pago;
+        this.formaDePago = formaDePago;
     }
-
-    public Pago getPago() {
-        return pago;
+    
+    public FormaDePago getFormaDePago() {
+        return formaDePago;
     }
 }
